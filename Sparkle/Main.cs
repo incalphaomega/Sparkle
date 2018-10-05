@@ -62,7 +62,7 @@ namespace Sparkle
 
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, null, null,null,null);
 
-            player.Draw();
+            player.Draw(gameTime);
 
             spriteBatch.End();
 
