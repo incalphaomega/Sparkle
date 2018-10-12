@@ -42,9 +42,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Handlers\Animation.cs" />
+    <Compile Include="Draw\Animation.cs" />
+    <Compile Include="Draw\Line.cs" />
+    <Compile Include="Draw\Render.cs" />
+    <Compile Include="Draw\TextureManager.cs" />
     <Compile Include="Handlers\Input.cs" />
-    <Compile Include="Handlers\Render.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
