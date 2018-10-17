@@ -28,8 +28,13 @@ namespace Sparkle.Draw
             {
                 texture = value;
                 sourceRectangle = fullTexture();
+                Rectangle = sourceRectangle;
             }
         }
+        /// <summary>
+        /// Rectangle, в котором отрисовывать текстуру
+        /// </summary>
+        public Rectangle Rectangle { get; set; }
         /// <summary>
         /// Бокс фактически отрисовываемой текстуры с учётом масштаба.
         /// </summary>
@@ -42,6 +47,7 @@ namespace Sparkle.Draw
             set
             {
                 sourceRectangle = new Rectangle((int)(value.X * scale), (int)(value.Y * scale), (int)(value.Width * scale), (int)(value.Height * scale));
+                Rectangle = sourceRectangle;
             }
         }
         /// <summary>
@@ -133,7 +139,6 @@ namespace Sparkle.Draw
         public Render()
         {
             Texture = TextureManager.NullTexture;
-            SourceRectangle = fullTexture();
             color = Color.White;
             Alpha = 100;
             Angle = 0;

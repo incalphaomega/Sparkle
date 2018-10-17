@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Point = Sparkle.Draw.Primitives.Point;
+
 namespace Sparkle.Handlers
 {
     class Input
@@ -229,7 +231,7 @@ namespace Sparkle.Handlers
             switch (button)
             {
                 case Buttons.Left:
-                    if (oldMState.LeftButton == ButtonState.Pressed)
+                    if (oldMState.LeftButton == ButtonState.Released)
                     {
                         return true;
                     }
@@ -238,7 +240,7 @@ namespace Sparkle.Handlers
                         return false;
                     }
                 case Buttons.Right:
-                    if (oldMState.RightButton == ButtonState.Pressed)
+                    if (oldMState.RightButton == ButtonState.Released)
                     {
                         return true;
                     }
@@ -247,7 +249,7 @@ namespace Sparkle.Handlers
                         return false;
                     }
                 case Buttons.Middle:
-                    if (oldMState.MiddleButton == ButtonState.Pressed)
+                    if (oldMState.MiddleButton == ButtonState.Released)
                     {
                         return true;
                     }

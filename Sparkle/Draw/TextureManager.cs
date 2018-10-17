@@ -17,9 +17,9 @@ namespace Sparkle.Draw
             NullTexture.SetData(new[] { Color.White });
         }
 
-        public static T Load<T>(string path)
+        public static Texture2D Load(string path)
         {
-            return Main.content.Load<T>(path);
+            return Main.content.Load<Texture2D>(path);
         }
     }
 }

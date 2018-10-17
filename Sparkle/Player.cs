@@ -36,7 +36,7 @@ namespace Sparkle
 
         public void LoadContent()
         {
-            render.Texture = TextureManager.Load<Texture2D>("Assassin");
+            render.Texture = TextureManager.Load("Assassin");
             //animation = new Animation(2, TextureManager.Load<Texture2D>("Player"), 2);
             render.Origin = render.textureCenter();
             //render.Size = 25;
@@ -87,15 +87,6 @@ namespace Sparkle
             if (keyPressed(Keys.Right))
             {
                 render.Angle += 90;
-            }
-
-            if (rect.Contains(mousePoint))
-            {
-                render.color = Color.Red;
-            }
-            else
-            {
-                render.color = Color.White;
             }
         }
 
